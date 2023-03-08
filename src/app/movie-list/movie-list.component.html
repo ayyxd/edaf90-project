@@ -1,0 +1,7 @@
+<app-filter-options [allGenres]="getGenres(filteredMovies)" (updateFilters)="filterMovies($event)"></app-filter-options>
+
+<mat-grid-list cols="5" rowHeight="300:445" gutterSize="16px">
+    <mat-grid-tile class="rounded" *ngFor="let movie of filteredMovies">
+        <app-movie class="h-100 w-100" [movie]="movie"></app-movie>
+    </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,18 @@
+<mat-card class="h-100 mat-elevation-z4 user-select-none" matRipple (click)="openDialog()">
+    <mat-card-header>
+        <mat-card-title class="h5">{{movie.Title}}</mat-card-title>
+        <mat-card-subtitle>{{movie.Year}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{movie.Poster}}" alt="Poster" *ngIf="movie.Poster">
+    <mat-card-content class="mt-2 h-100">
+        {{movie.Plot}}
+    </mat-card-content>
+    <div class="position-absolute w-100">
+        <div class="float-end m-3 booked rounded text-black shadow" *ngIf="isBooked()">BOOKED</div>
+    </div>
+    <mat-card-footer>
+        <mat-chip-listbox class="m-3 opacity-75">
+            <mat-chip *ngFor="let genre of getGenres()">{{genre}}</mat-chip>
+        </mat-chip-listbox>
+    </mat-card-footer>
+</mat-card>

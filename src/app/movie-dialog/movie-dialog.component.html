@@ -1,0 +1,10 @@
+<div class="m-3">
+    <h1>{{data.movie.Title}}</h1>
+    <img class="rounded mx-auto d-block m-3" src="{{data.movie.Poster}}" alt="Poster" *ngIf="data.movie.Poster">
+    <p>{{data.movie.Plot}}</p>
+</div>
+<div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="data.booked" cdkFocusInitial *ngIf="!data.booked">Book Movie</button>
+    <button mat-button [mat-dialog-close]="data.booked" cdkFocusInitial *ngIf="data.booked">Unbook Movie</button>
+    <button mat-button (click)="onNoClick()">Back</button>
+</div>

@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: hsl(-100, 10%, 5%);
+}
+
+mat-grid-tile {
+    box-shadow: rgba(0,0,0,0.6) 0 0 8px;
+}
+
+mat-card {
+    cursor: pointer;
+    text-shadow: #000 0 0 16px;
+}
+
+mat-card .mdc-card__media {
+    transition: filter 0.5s;
+    position: absolute !important;
+    z-index: -1;
+    filter: brightness(0.75);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+mat-card:hover .mdc-card__media {
+    transition: filter 0.1s;
+    filter: brightness(0.3);
+}
+
+mat-card mat-card-content {
+    transition: color 0.5s;
+    color: hsla(260, 0%, 80%, 0);
+}
+
+mat-card:hover mat-card-content {
+    transition: color 0.1s;
+    color: hsla(260, 0%, 80%, 1);
+}
+
+.booked {
+    background-color:hsla(140, 100%, 75%, 0.75) !important;
+    padding: 3px 6px;
+}
+
+.snackbar-success .mdc-snackbar__surface {
+    background-color:hsl(140, 100%, 75%) !important;
+}
+
+.snackbar-failure .mdc-snackbar__surface {
+    background-color:hsl(-10, 100%, 75%) !important;
+}
